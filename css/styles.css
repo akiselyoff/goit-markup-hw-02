@@ -1,14 +1,17 @@
 :root {
-  --text-color-blue: #2196f3;
-  --text-color-gray: #757575;
-  --text-color-black: #212121;
-  --text-color-white: #ffffff;
-  --background-color-darkgray: #2f303a;
+  --active-text-color: #2196f3;
+  --prime-text-color: #757575;
+  --secondary-text-color: #212121;
+  --btn-text-color: #ffffff;
+  --hero-btn-active-color: #188ce8;
+  --prime-background-color: #ffffff;
+  --secondary-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
 }
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #ffffff;
-  color: var(--text-color-black);
+  background-color: var(--prime-background-color);
+  color: var(--secondary-text-color);
 }
 ul {
   list-style: none;
@@ -39,10 +42,10 @@ a {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: var(--text-color-black);
+  color: var(--secondary-text-color);
 }
 .logo span {
-  color: var(--text-color-blue);
+  color: var(--active-text-color);
 }
 .nav .link,
 .contacts .link {
@@ -52,24 +55,27 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.nav .link {
+  color: var(--secondary-text-color);
+}
 .nav .active > .link {
-  color: var(--text-color-blue) !important;
+  color: var(--active-text-color);
 }
 .nav .link:hover,
 .nav .link:focus,
 .contacts .link:hover,
 .contacts .link:focus {
-  color: var(--text-color-blue);
+  color: var(--active-text-color);
 }
 .contacts .link {
-  color: var(--text-color-gray);
+  color: var(--prime-text-color);
 }
 /*****************main index*******************/
 .hero {
-  background-color: var(--background-color-darkgray);
-  color: var(--text-color-white);
+  background-color: var(--footer-background-color);
+  color: var(--btn-text-color);
 }
-.hero .title {
+.hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -77,21 +83,21 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hero .btn {
-  font-family: 'Roboto', sans-serif;
-  font-style: normal;
+.hero-btn {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: 0;
   letter-spacing: 0.06em;
-  background-color: var(--text-color-blue);
-  color: var(--text-color-white);
+  background-color: var(--active-text-color);
+  color: var(--btn-text-color);
 }
 .hero .btn:hover,
 .hero .btn:focus {
-  background-color: #188ce8;
+  background-color: var(--hero-btn-active-color);
 }
 
 .features-list-item .title {
@@ -105,7 +111,7 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--text-color-gray);
+  color: var(--prime-text-color);
 }
 .we-doing > .title,
 .team > .title {
@@ -116,10 +122,10 @@ a {
   letter-spacing: 0.03em;
 }
 .team {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-background-color);
 }
 .team-list-item {
-  background-color: #ffffff;
+  background-color: var(--prime-background-color);
 }
 .team-list-item .title {
   font-weight: 500;
@@ -133,8 +139,8 @@ a {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  background-color: #f5f4fa;
-  color: var(--text-color-gray);
+  background-color: var(--prime-background-color);
+  color: var(--prime-text-color);
 }
 
 /********************main portfolio**********************/
@@ -150,15 +156,17 @@ a {
   border: none;
 }
 .filter .btn:hover,
-.filter .btn:focus {
-  background-color: var(--text-color-blue);
-  color: var(--text-color-white);
+.filter .btn:focus,
+.btn.active {
+  background-color: var(--active-text-color);
+  color: var(--btn-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
+
 .project-item {
-  background: #ffffff;
+  background-color: var(--prime-background-color);
   border: 1px solid #eeeeee;
 }
 .project-item .title {
@@ -171,18 +179,19 @@ a {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
-  color: var(--text-color-gray);
+  color: var(--prime-text-color);
 }
 /*************************footer*************************/
 .footer {
-  background-color: var(--background-color-darkgray);
+  background-color: var(--footer-background-color);
 }
 .footer .logo {
-  color: var(--text-color-white);
+  color: var(--btn-text-color);
 }
 .address {
   font-size: 14px;
+  font-style: normal;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--text-color-white);
+  color: var(--btn-text-color);
 }
