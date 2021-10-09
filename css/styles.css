@@ -13,10 +13,10 @@ body {
   background-color: var(--prime-background-color);
   color: var(--secondary-text-color);
 }
-ul {
+.list {
   list-style: none;
 }
-a {
+.link {
   text-decoration: none;
 }
 .btn {
@@ -47,7 +47,7 @@ a {
 .logo span {
   color: var(--active-text-color);
 }
-.nav .link,
+.nav-list .link,
 .contacts .link {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -55,21 +55,22 @@ a {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.nav .link {
+.nav-list .link {
   color: var(--secondary-text-color);
-}
-.nav .active > .link {
-  color: var(--active-text-color);
-}
-.nav .link:hover,
-.nav .link:focus,
-.contacts .link:hover,
-.contacts .link:focus {
-  color: var(--active-text-color);
 }
 .contacts .link {
   color: var(--prime-text-color);
 }
+.nav-list > .active > .link {
+  color: var(--active-text-color);
+}
+.nav-list .link:hover,
+.nav-list .link:focus,
+.contacts .link:hover,
+.contacts .link:focus {
+  color: var(--active-text-color);
+}
+
 /*****************main index*******************/
 .hero {
   background-color: var(--footer-background-color);
